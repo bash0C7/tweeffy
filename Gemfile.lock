@@ -1,0 +1,194 @@
+GIT
+  remote: git://github.com/rails/activerecord-deprecated_finders.git
+  revision: 46aa99efc9c3c1db1d4f2e55373481212e6b2e26
+  specs:
+    activerecord-deprecated_finders (0.0.3)
+
+GIT
+  remote: git://github.com/rails/arel.git
+  revision: 933ea218116645eafaf3b7ea5695520db0f9d9ba
+  specs:
+    arel (4.0.0.beta2.20130314230643)
+
+GIT
+  remote: git://github.com/rails/coffee-rails.git
+  revision: 948fef30464235e7588e34faa513b448a00c0e6b
+  specs:
+    coffee-rails (4.0.0.beta1)
+      coffee-script (>= 2.2.0)
+      railties (>= 4.0.0.beta, < 5.0)
+
+GIT
+  remote: git://github.com/rails/rails.git
+  revision: fb6c661fe946dc899b15d15b92cc8cf9a21d424e
+  specs:
+    actionmailer (4.0.0.beta1)
+      actionpack (= 4.0.0.beta1)
+      mail (~> 2.5.3)
+    actionpack (4.0.0.beta1)
+      activesupport (= 4.0.0.beta1)
+      builder (~> 3.1.0)
+      erubis (~> 2.7.0)
+      rack (~> 1.5.2)
+      rack-test (~> 0.6.2)
+    activemodel (4.0.0.beta1)
+      activesupport (= 4.0.0.beta1)
+      builder (~> 3.1.0)
+    activerecord (4.0.0.beta1)
+      activemodel (= 4.0.0.beta1)
+      activerecord-deprecated_finders (~> 0.0.3)
+      activesupport (= 4.0.0.beta1)
+      arel (~> 4.0.0.beta2)
+    activesupport (4.0.0.beta1)
+      i18n (~> 0.6, >= 0.6.4)
+      minitest (~> 4.2)
+      multi_json (~> 1.3)
+      thread_safe (~> 0.1)
+      tzinfo (~> 0.3.37)
+    rails (4.0.0.beta1)
+      actionmailer (= 4.0.0.beta1)
+      actionpack (= 4.0.0.beta1)
+      activerecord (= 4.0.0.beta1)
+      activesupport (= 4.0.0.beta1)
+      bundler (>= 1.3.0, < 2.0)
+      railties (= 4.0.0.beta1)
+      sprockets-rails (~> 2.0.0.rc3)
+    railties (4.0.0.beta1)
+      actionpack (= 4.0.0.beta1)
+      activesupport (= 4.0.0.beta1)
+      rake (>= 0.8.7)
+      thor (>= 0.18.1, < 2.0)
+
+GIT
+  remote: git://github.com/rails/sass-rails.git
+  revision: d435679b0fe528b954a9abd0059f975d94707574
+  specs:
+    sass-rails (4.0.0.beta1)
+      railties (>= 4.0.0.beta, < 5.0)
+      sass (>= 3.1.10)
+      sprockets-rails (~> 2.0.0.rc0)
+      tilt (~> 1.3)
+
+GIT
+  remote: git://github.com/rails/sprockets-rails.git
+  revision: 8105eb9ee2d4889f9d3d7c327899b63493f4b061
+  specs:
+    sprockets-rails (2.0.0.rc3)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      sprockets (~> 2.8)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    atomic (1.1.6)
+    builder (3.1.4)
+    childprocess (0.3.9)
+      ffi (~> 1.0, >= 1.0.11)
+    coderay (1.0.9)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.6.2)
+    diff-lcs (1.2.2)
+    erubis (2.7.0)
+    execjs (1.4.0)
+      multi_json (~> 1.0)
+    ffi (1.6.0)
+    formatador (0.2.4)
+    guard (1.7.0)
+      formatador (>= 0.2.4)
+      listen (>= 0.6.0)
+      lumberjack (>= 1.0.2)
+      pry (>= 0.9.10)
+      thor (>= 0.14.6)
+    guard-spork (1.5.0)
+      childprocess (>= 0.2.3)
+      guard (>= 1.1)
+      spork (>= 0.8.4)
+    hike (1.2.1)
+    i18n (0.6.4)
+    jbuilder (1.0.2)
+      activesupport (>= 3.0.0)
+    jquery-rails (2.2.1)
+      railties (>= 3.0, < 5.0)
+      thor (>= 0.14, < 2.0)
+    json (1.7.7)
+    listen (0.7.3)
+    lumberjack (1.0.3)
+    mail (2.5.3)
+      i18n (>= 0.4.0)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    method_source (0.8.1)
+    mime-types (1.22)
+    minitest (4.7.0)
+    multi_json (1.7.2)
+    pg (0.15.1)
+    polyglot (0.3.3)
+    pry (0.9.12)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+    rack (1.5.2)
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    rake (10.0.4)
+    rdoc (3.12.2)
+      json (~> 1.4)
+    rspec-core (2.13.1)
+    rspec-expectations (2.13.0)
+      diff-lcs (>= 1.1.3, < 2.0)
+    rspec-mocks (2.13.1)
+    rspec-rails (2.13.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 2.13.0)
+      rspec-expectations (~> 2.13.0)
+      rspec-mocks (~> 2.13.0)
+    sass (3.2.7)
+    sdoc (0.3.20)
+      json (>= 1.1.3)
+      rdoc (~> 3.10)
+    slop (3.4.4)
+    spork (0.9.2)
+    sprockets (2.9.0)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+    sqlite3 (1.3.7)
+    thor (0.18.1)
+    thread_safe (0.1.0)
+      atomic
+    tilt (1.3.6)
+    treetop (1.4.12)
+      polyglot
+      polyglot (>= 0.3.1)
+    turbolinks (1.1.1)
+      coffee-rails
+    tzinfo (0.3.37)
+    uglifier (1.3.0)
+      execjs (>= 0.3.0)
+      multi_json (~> 1.0, >= 1.0.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activerecord-deprecated_finders!
+  arel!
+  coffee-rails!
+  guard-spork
+  jbuilder (~> 1.0.1)
+  jquery-rails
+  pg
+  rails!
+  rspec-rails
+  sass-rails!
+  sdoc
+  sprockets-rails!
+  sqlite3
+  turbolinks
+  uglifier (~> 1.3)
