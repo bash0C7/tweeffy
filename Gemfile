@@ -5,7 +5,9 @@ gem 'rails',     github: 'rails/rails'
 gem 'arel',      github: 'rails/arel'
 gem 'activerecord-deprecated_finders', github: 'rails/activerecord-deprecated_finders'
 
-
+# libs
+gem 'twitter'
+gem 'tumblr_client'
 
 # database
 group :production do
@@ -16,6 +18,12 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'guard-spork'
+  gem 'pry'
+  gem 'pry-doc'
+end
+
+group :development do
+  gem 'oauth'
 end
 
 # Use edge version of sprockets-rails
