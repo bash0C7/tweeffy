@@ -1,3 +1,4 @@
+
 desc 'crawl tweets, read picture by tweet media url and post to Tumblr'
 task :crawl_tweets  => :environment do
   tumblr = Tumblr::Client.new
@@ -18,15 +19,29 @@ task :crawl_tweets  => :environment do
         logger.info "no media #{tw.id}"
       else
         tw_url = "https://twitter.com/#{user.name}/status/#{tw.id}"
-        tumblr.photo('tweeffy.tumblr.com',
-          #        state: 'draft',
-          tags: %W(#{user.name}).join(','),
-          caption: "“#{tw.text}”(#{tw_url})",
-          source: tw_url,
-          link: tw_url,
-          data_raw: tw.media.map {|m| open(m.media_url).read}
-        ) 
-        logger.info "posted #{tw.id} #{tw.text}"
+        data_raw = tw.media.map do |m| 
+          begin
+            open(m.media_url).read
+          rescue => e
+            logger.warn "exception #{tw.id} #{tw.text} #{e.to_s} #{m.media_url}"
+            next
+          end
+        end
+        begin
+          tumblr.photo('tweeffy.tumblr.com',
+            #        state: 'draft',
+            tags: %W(#{user.name}).join(','),
+            caption: "“#{tw.text}”(#{tw_url})",
+            source: tw_url,
+            link: tw_url,
+            data_raw: data_raw
+          )
+        rescue => e
+          logger.warn "exception #{tw.id} #{tw.text} #{e.to_s}"
+          next
+        else
+          logger.info "posted #{tw.id} #{tw.text}"
+        end
       end
       latest_crawled_tweet_id = tw.id
       user.update_attribute(:latest_crawled_tweet_id, latest_crawled_tweet_id)
