@@ -1,5 +1,5 @@
 require 'twitter'
-gem 'tumblr_client'
+require 'tumblr_client'
 
 Twitter.configure do |config|
   config.consumer_key = ENV['TWITTER_CONSUMER_KEY']
