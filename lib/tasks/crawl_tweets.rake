@@ -1,11 +1,5 @@
-require 'twitter'
-require 'pry'
-require 'open-uri'
-
-
-desc 'crawl tweets'
+desc 'crawl tweets, read picture by tweet media url and post to Tumblr'
 task :crawl_tweets  => :environment do
-
   tumblr = Tumblr::Client.new
 
   logger = Logger.new(STDOUT)
