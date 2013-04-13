@@ -7,4 +7,8 @@ class CreateTweetUsers < ActiveRecord::Migration
       t.timestamps
     end
   end
+  
+  def down
+    drop_table :tweet_users
+  end
 end

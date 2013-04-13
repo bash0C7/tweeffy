@@ -1,11 +1,11 @@
 
 desc 'crawl tweets, read picture by tweet media url and post to Tumblr'
-task :crawl_tweets  => :environment do
+task :crawl_tweets => :environment do
   tumblr = Tumblr::Client.new
 
   logger = Logger.new(STDOUT)
 
-  TweetUser.all.lazy.each do |user|
+  TweetUser.all.each do |user|
     latest_crawled_tweet_id = user.latest_crawled_tweet_id
     tl = Twitter.user_timeline(user.name)
   
@@ -27,20 +27,23 @@ task :crawl_tweets  => :environment do
             next
           end
         end
-        begin
-          tumblr.photo('tweeffy.tumblr.com',
-            #        state: 'draft',
-            tags: %W(#{user.name}).join(','),
-            caption: "“#{tw.text}”(#{tw_url})",
-            source: tw_url,
-            link: tw_url,
-            data_raw: data_raw
-          )
-        rescue => e
-          logger.warn "exception #{tw.id} #{tw.text} #{e.to_s}"
-          next
-        else
-          logger.info "posted #{tw.id} #{tw.text}"
+        
+        user.tumblr_blogs.all.each do |tb|
+          begin
+            tumblr.photo("#{tb.name}.tumblr.com",
+              #        state: 'draft',
+              tags: %W(#{user.name}).join(','),
+              caption: "“#{tw.text}”(#{tw_url})",
+              source: tw_url,
+              link: tw_url,
+              data_raw: data_raw
+            )
+          rescue => e
+            logger.warn "exception #{tb.name} #{tw.id} #{tw.text} #{e.to_s}"
+            next
+          else
+            logger.info "posted #{tb.name} #{tw.id} #{tw.text}"
+          end
         end
       end
       latest_crawled_tweet_id = tw.id

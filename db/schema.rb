@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130409005941) do
+ActiveRecord::Schema.define(version: 20130413082654) do
+
+  create_table "tumblr_blogs", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tumblr_blogs_tweet_users", id: false, force: true do |t|
+    t.integer "tumblr_blog_id"
+    t.integer "tweet_user_id"
+  end
 
   create_table "tweet_users", force: true do |t|
     t.string   "name"

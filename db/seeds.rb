@@ -5,4 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-TweetUser.create(name: 'yufu_BiS', latest_crawled_tweet_id: 0)
+yufu_bis = TweetUser.create(name: 'yufu_BiS', latest_crawled_tweet_id: 0)
+tweeffy = TumblrBlog.new(name: 'tweeffy')
+#tweeffy.tweet_users << yufu_bis
+#yufu_bis.tumblr_blogs << tweeffy 
+yufu_bis.tumblr_blogs.create(name: 'tweeffy')
