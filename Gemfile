@@ -8,6 +8,7 @@ gem 'activerecord-deprecated_finders', github: 'rails/activerecord-deprecated_fi
 # libs
 gem 'twitter'
 gem 'tumblr_client'
+gem 'wangiry'
 
 # database
 group :production do
