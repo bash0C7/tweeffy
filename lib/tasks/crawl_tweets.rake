@@ -72,7 +72,7 @@ task :crawl_hashtagd_tweets => :environment do
         logger.info "skip #{tw.id}"
         next
       end
-binding.pry
+
       if tw.media.size.zero? #and tw.text =~ /^RT\s+/
         logger.info "no media #{tw.id}"
       else
