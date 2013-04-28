@@ -1,4 +1,10 @@
 Tweeffy::Application.routes.draw do
+  resources :tweet_users do
+    collection do
+      post 'post_to_blog'
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
