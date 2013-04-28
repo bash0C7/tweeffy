@@ -19,3 +19,8 @@
 /tmp
 /nbproject/private/
 .DS_Store
+
+# Ignore assets
+/public/assets/*
+/public/cache/*
+

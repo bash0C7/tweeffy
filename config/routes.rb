@@ -2,6 +2,7 @@ Tweeffy::Application.routes.draw do
   resources :tweet_users do
     collection do
       post 'post_to_blog'
+      post 'status'
     end
   end
 
