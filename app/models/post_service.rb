@@ -7,13 +7,13 @@ class PostService
     latest_crawled_tweet_id = tweet_user.latest_crawled_tweet_id
 
     tweet_user.read_tweets.reverse_each do |tw|
-      if latest_crawled_tweet_id.to_i >= tw.id
-        Rails.logger.info "skip #{tweet_user.name} #{tw.id}"
+      if tw.media.size.zero? #and tw.text =~ /^RT\s+/
+        Rails.logger.info "no media #{tweet_user.name} #{tw.id}"
         next
       end
 
-      if tw.media.size.zero? #and tw.text =~ /^RT\s+/
-        Rails.logger.info "no media #{tweet_user.name} #{tw.id}"
+      if latest_crawled_tweet_id.to_i >= tw.id
+        Rails.logger.info "skip #{tweet_user.name} #{tw.id}"
         next
       end
       
@@ -22,7 +22,7 @@ class PostService
         begin
           open(m.media_url).read
         rescue => e
-          Rails.logger.warn "exception #{tweet_user.name} #{tw.id} #{tw.text} #{e.to_s} #{m.media_url}"
+          Rails.logger.warn "read failer #{tweet_user.name} #{tw.id} #{tw.text} #{e.to_s} #{m.media_url}"
           next
         end
       end
@@ -38,7 +38,7 @@ class PostService
           )
           Rails.logger.info "posted #{tweet_user.name} #{tb.name} #{tw.id}: #{tw.text}"
         rescue => e
-          Rails.logger.warn "exception #{tweet_user.name}  #{tw.id}: #{tb.name} #{tw.id} #{tw.text} #{e.to_s}"
+          Rails.logger.warn "post failer #{tweet_user.name}  #{tw.id}: #{tb.name} #{tw.id} #{tw.text} #{e.to_s}"
         end
       end
       latest_crawled_tweet_id = tw.id
