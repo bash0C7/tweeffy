@@ -1,94 +1,43 @@
-GIT
-  remote: git://github.com/rails/activerecord-deprecated_finders.git
-  revision: 5ed930cfb6bbfa71284d3e81b3bde8dbf78d8093
+GEM
+  remote: https://rubygems.org/
   specs:
-    activerecord-deprecated_finders (1.0.1)
-
-GIT
-  remote: git://github.com/rails/arel.git
-  revision: 3ef63ac5366000b232ca5fe0848de9db9a3c1f9a
-  specs:
-    arel (4.0.0.20130418133826)
-
-GIT
-  remote: git://github.com/rails/coffee-rails.git
-  revision: 78d4d7ac5baf4e76a6717f303f51b505c40b9770
-  specs:
-    coffee-rails (4.0.0)
-      coffee-script (>= 2.2.0)
-      railties (>= 4.0.0.beta, < 5.0)
-
-GIT
-  remote: git://github.com/rails/rails.git
-  revision: 457c79cbf3a856c3955bd1b707c3fbf8ea2ad23e
-  specs:
-    actionmailer (4.0.0.beta1)
-      actionpack (= 4.0.0.beta1)
+    actionmailer (4.0.0)
+      actionpack (= 4.0.0)
       mail (~> 2.5.3)
-    actionpack (4.0.0.beta1)
-      activesupport (= 4.0.0.beta1)
+    actionpack (4.0.0)
+      activesupport (= 4.0.0)
       builder (~> 3.1.0)
       erubis (~> 2.7.0)
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
-    activemodel (4.0.0.beta1)
-      activesupport (= 4.0.0.beta1)
+    activemodel (4.0.0)
+      activesupport (= 4.0.0)
       builder (~> 3.1.0)
-    activerecord (4.0.0.beta1)
-      activemodel (= 4.0.0.beta1)
-      activerecord-deprecated_finders (~> 1.0.1)
-      activesupport (= 4.0.0.beta1)
+    activerecord (4.0.0)
+      activemodel (= 4.0.0)
+      activerecord-deprecated_finders (~> 1.0.2)
+      activesupport (= 4.0.0)
       arel (~> 4.0.0)
-    activesupport (4.0.0.beta1)
+    activerecord-deprecated_finders (1.0.3)
+    activesupport (4.0.0)
       i18n (~> 0.6, >= 0.6.4)
       minitest (~> 4.2)
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
-    rails (4.0.0.beta1)
-      actionmailer (= 4.0.0.beta1)
-      actionpack (= 4.0.0.beta1)
-      activerecord (= 4.0.0.beta1)
-      activesupport (= 4.0.0.beta1)
-      bundler (>= 1.3.0, < 2.0)
-      railties (= 4.0.0.beta1)
-      sprockets-rails (~> 2.0.0.rc4)
-    railties (4.0.0.beta1)
-      actionpack (= 4.0.0.beta1)
-      activesupport (= 4.0.0.beta1)
-      rake (>= 0.8.7)
-      thor (>= 0.18.1, < 2.0)
-
-GIT
-  remote: git://github.com/rails/sass-rails.git
-  revision: aeae25d22c8392a8ac0a07c86664d37d6acd9e25
-  specs:
-    sass-rails (4.0.0.rc1)
-      railties (>= 4.0.0.beta, < 5.0)
-      sass (>= 3.1.10)
-      sprockets-rails (~> 2.0.0.rc4)
-
-GIT
-  remote: git://github.com/rails/sprockets-rails.git
-  revision: bbf755e8b3aaea4105d05a01d2e115ef30ccc6c7
-  specs:
-    sprockets-rails (2.0.0.rc4)
-      actionpack (>= 3.0)
-      activesupport (>= 3.0)
-      sprockets (~> 2.8)
-
-GEM
-  remote: https://rubygems.org/
-  specs:
-    atomic (1.1.8)
+    arel (4.0.0)
+    atomic (1.1.10)
     builder (3.1.4)
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
     coderay (1.0.9)
+    coffee-rails (4.0.0)
+      coffee-script (>= 2.2.0)
+      railties (>= 4.0.0.beta, < 5.0)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.6.2)
+    coffee-script-source (1.6.3)
     diff-lcs (1.2.4)
     erubis (2.7.0)
     execjs (1.4.0)
@@ -109,10 +58,11 @@ GEM
       childprocess (>= 0.2.3)
       guard (>= 1.1)
       spork (>= 0.8.4)
-    hike (1.2.2)
+    hike (1.2.3)
     i18n (0.6.4)
-    jbuilder (1.0.2)
+    jbuilder (1.4.2)
       activesupport (>= 3.0.0)
+      multi_json (>= 1.2.0)
     jquery-rails (2.2.1)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
@@ -124,13 +74,12 @@ GEM
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
     lumberjack (1.0.3)
-    mail (2.5.3)
-      i18n (>= 0.4.0)
+    mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     method_source (0.8.1)
     mime-types (1.23)
-    minitest (4.7.3)
+    minitest (4.7.5)
     multi_json (1.7.2)
     multipart-post (1.2.0)
     oauth (0.4.7)
@@ -146,7 +95,25 @@ GEM
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
-    rake (10.0.4)
+    rails (4.0.0)
+      actionmailer (= 4.0.0)
+      actionpack (= 4.0.0)
+      activerecord (= 4.0.0)
+      activesupport (= 4.0.0)
+      bundler (>= 1.3.0, < 2.0)
+      railties (= 4.0.0)
+      sprockets-rails (~> 2.0.0)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.1)
+    rails_stdout_logging (0.0.1)
+    railties (4.0.0)
+      actionpack (= 4.0.0)
+      activesupport (= 4.0.0)
+      rake (>= 0.8.7)
+      thor (>= 0.18.1, < 2.0)
+    rake (10.1.0)
     rb-fsevent (0.9.3)
     rb-inotify (0.9.0)
       ffi (>= 0.5.0)
@@ -165,24 +132,32 @@ GEM
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
       rspec-mocks (~> 2.13.0)
-    sass (3.2.8)
+    sass (3.2.9)
+    sass-rails (4.0.0)
+      railties (>= 4.0.0.beta, < 5.0)
+      sass (>= 3.1.10)
+      sprockets-rails (~> 2.0.0)
     sdoc (0.3.20)
       json (>= 1.1.3)
       rdoc (~> 3.10)
     simple_oauth (0.2.0)
     slop (3.4.4)
     spork (0.9.2)
-    sprockets (2.9.3)
+    sprockets (2.10.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    sprockets-rails (2.0.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      sprockets (~> 2.8)
     sqlite3 (1.3.7)
     thor (0.18.1)
     thread_safe (0.1.0)
       atomic
-    tilt (1.3.7)
-    treetop (1.4.12)
+    tilt (1.4.1)
+    treetop (1.4.14)
       polyglot
       polyglot (>= 0.3.1)
     tumblr_client (0.7.1)
@@ -212,24 +187,22 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord-deprecated_finders!
-  arel!
-  coffee-rails!
+  coffee-rails (~> 4.0.0)
   guard-spork
-  jbuilder (~> 1.0.1)
+  jbuilder (~> 1.2)
   jquery-rails
   oauth
   pg
   pry
   pry-doc
-  rails!
+  rails (= 4.0.0)
+  rails_12factor
   rspec-rails
-  sass-rails!
+  sass-rails (~> 4.0.0)
   sdoc
-  sprockets-rails!
   sqlite3
   tumblr_client
   turbolinks
   twitter
-  uglifier (~> 1.3)
+  uglifier (>= 1.3.0)
   wangiry
